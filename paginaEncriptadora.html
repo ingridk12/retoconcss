@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador y Desencriptador</title>
+    <script src="encriptador.js"></script> <!-- Asegúrate de ajustar el nombre del archivo JS -->
+    <link rel="stylesheet" href="./estilos/styles.css">
+</head>
+<body>
+  <main>
+<section class="contenido">
+    <div class="contenido__resultado">
+    <label class="label" for="inputPalabra">Ingresa su texto aqui:</label>
+    <input class="input" type="text" id="inputPalabra">
+    <div class="botones">
+        <button class="encriptar" onclick="encriptarYMostrar()">Encriptar</button>
+        <button class="desencriptar" onclick="desencriptarYMostrar()">Desencriptar</button>
+        <button class="desencriptar">Copiar</button>
+    </div>
+    
+</div >
+    <div class="contenido__resultado">
+        <p class="resultado" id="resultado"></p>   
+        
+ 
+    </div >
+   
+    <script>
+        function encriptarYMostrar() {
+            let palabra = document.getElementById('inputPalabra').value.trim();
+            let palabraEncriptada = encriptar(palabra);
+            document.getElementById('resultado').innerText = `${palabraEncriptada}`;
+        }
+
+        function desencriptarYMostrar() {
+            let palabraEncriptada = document.getElementById('inputPalabra').value.trim();
+            let palabraDesencriptada = desencriptar(palabraEncriptada);
+            document.getElementById('resultado').innerText = ` ${palabraDesencriptada}`;
+        }
+    </script>
+    </section>
+  </main>
+</body>
+</html>
