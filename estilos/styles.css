@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-
+@import url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 20 20'%3E%3Cpath fill='%23000' d='M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07M9 5v6h2V5zm0 8v2h2v-2z'/%3E%3C/svg%3E");
 :root{
-    --color-primiario: #E5E5E5;
+    --color-primiario: #F3F5FC;
     --color-secundario:  #0A3871;
     --color-terciario: #D8DFE8;
     --color-quinto: #FFFFFF;
@@ -24,20 +24,67 @@ body{
 .contenido{
     width: 50%;
     display: flex;
-    column-gap: 200px;
+        
 }
 
 .contenido__resultado{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+        align-items: center;
+        width: 100%;
+        /* height: 100%; */
+        height: calc(100% + 60px);
+        background: white;
+        border-radius: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 16px;
+        gap: 32px;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    
+}
+
+.label{
+    font-family: var(--fuente-inter);
+    font-size: 32px;
+    color: var(--color-secundario);
+}
+.etiqueta{
+    font-family: var(--fuente-inter);
+    font-size: 12px;
+}
+.input{
+    width: 35rem;
+    height: 32rem;
+    border: none;
+    font-family: var(--fuente-inter);
+    font-size: 24px;
+    text-align:center;
+    color: var(--color-secundario);
+    background-color: var(--color-primiario);
+}
+
+.resultados{
+    width: 16rem;
+    height: 32rem;
+    border: none;
+    border-radius: 32px;
+    background-color: var(--color-quinto);
+    margin-top: auto;
+    font-family: var(--fuente-inter);
+    padding: 0.5rem 6rem 0.5rem 6rem;
 }
 .botones{
    display: flex;
     flex-direction: row;
-    
     gap: 24px;
+}
+.info {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	text-align: center;
+	font-size: 16px;
+	color: var(--color-sexto);
 }
 .encriptar{
     width: 50%;
@@ -71,4 +118,21 @@ body{
     justify-content: center;
     gap: 10px;
 }
+.textoFinal{
+	width: 100%;
+	font-size: 24px;
+	color: var(--color-greyDark);
+	border: none;
+	outline: none;
+	text-align: center;
+	overflow: hidden;
+	resize: none;
+	pointer-events: none;
+	font-family: 'Space Mono', monospace;
+}
+.munheco{
+	min-width: 230px;
+	width: 50%;
+}
+
 
