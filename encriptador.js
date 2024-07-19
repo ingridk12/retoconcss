@@ -17,6 +17,7 @@ function encriptar(palabra) {
         } else {
             palabraEncriptada += letra;
         }
+        limpiarCaja();
     }
     return palabraEncriptada;
 }
@@ -37,8 +38,20 @@ function desencriptar(palabraEncriptada) {
     for (let sustitucion in sustitucionesInvertidas) {
         let regex = new RegExp(sustitucion, 'g');
         palabra = palabra.replace(regex, sustitucionesInvertidas[sustitucion]);
+        limpiarCaja();
     }
     return palabra;
+}
+function limpiarCaja(){
+    document.querySelector("#inputPalabra").value="";
+}
+
+function copiarTexto(){
+    let textos = document.getElementById('resultado');
+    textos.select();
+    textos.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert("Texto copiado exitosamente")
 }
 
 // Ejemplo de uso
