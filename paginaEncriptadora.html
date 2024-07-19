@@ -10,19 +10,29 @@
 <body>
   <main>
 <section class="contenido">
+
     <div class="contenido__resultado">
-    <label class="label" for="inputPalabra">Ingresa su texto aqui:</label>
-    <input class="input" type="text" id="inputPalabra">
+    <label class="label" id="texto" for="inputPalabra" >Encriptador de texto:</label>
+    <input class="input" placeholder="Ingresa el texto aqui:" type="text" id="inputPalabra" autofocus>
+    <div>
+        <span class="info">
+            <img src="./imagenes/!.svg" alt="Advertencia"/>
+            Solo letras minusculas y sin acento
+        </span>
+    </div>
+    
     <div class="botones">
         <button class="encriptar" onclick="encriptarYMostrar()">Encriptar</button>
         <button class="desencriptar" onclick="desencriptarYMostrar()">Desencriptar</button>
-        <button class="desencriptar">Copiar</button>
+        
     </div>
     
-</div >
+</div>
     <div class="contenido__resultado">
-        <p class="resultado" id="resultado"></p>   
-        
+        <img class="dibujo" id="dibujo" src="./imagenes/animado.svg" alt="Ningun mensaje fue encotrado. Ingrese el texto que desea eciptar y desencriptar"/>
+        <textarea class="resultados" id="resultado" placeholder="Ningun mensaje fue encotrado."></textarea>  
+        <p class="textoinfo" id="info">Ingrese el texto que desea eciptar y desencriptar</p> 
+        <button class="desencriptar" id="botonCopiar" onclick="copiarTexto()">Copiar</button>
  
     </div >
    
@@ -38,6 +48,7 @@
             let palabraDesencriptada = desencriptar(palabraEncriptada);
             document.getElementById('resultado').innerText = ` ${palabraDesencriptada}`;
         }
+        
     </script>
     </section>
   </main>
